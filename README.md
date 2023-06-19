@@ -30,7 +30,7 @@ int main() {
   node<int>* my_node = new node<int>(10);   // Creates a node with value 10, and points to nothing
   auto my_other_node  = new node<int>(20);  // Creates a node with value 20, and points to nothing
   
-  my_node->set_next(my_other_node);                         // Now `myNode` points to `myOtherNode`
+  my_node->set_next(my_other_node);                         // Now `my_node` points to `my_other_node`
   std::cout << my_node->get_next()->get_data() << "\n";     // Output is 20
 
   auto copy_node = node<int>(*my_node);
