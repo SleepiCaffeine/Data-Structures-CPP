@@ -23,21 +23,21 @@ Simply include `data_structues.hpp` or any individual header, and start using it
 ## Example of use
 All classes and types will have their own users-guide, and hopefully a Doxygen generated documentation PDF.
 ```
-#include "node.h"
+#include "Data Structures\node.h"
 #include <iostream>
 
 int main() {
-  Node<int>* myNode = new Node<int>(10);  // Creates a node with value 10, and points to nothing
-  auto myOtherNode  = new Node<int>(20);  // Creates a node with value 20, and points to nothing
+  node<int>* my_node = new node<int>(10);   // Creates a node with value 10, and points to nothing
+  auto my_other_node  = new node<int>(20);  // Creates a node with value 20, and points to nothing
   
-  myNode.set_next(myOtherNode);                         // Now `myNode` points to `myOtherNode`
-  std::cout << myNode->get_next()->get_data() << "\n";  // Output is 20
+  my_node->set_next(my_other_node);                         // Now `myNode` points to `myOtherNode`
+  std::cout << my_node->get_next()->get_data() << "\n";     // Output is 20
 
-  auto copyNode = Node<int>(*myNode);
-  myNode->set_data(35);
+  auto copy_node = node<int>(*my_node);
+  my_node->set_data(35);
   
-  std::cout << myNode->->get_data() << "\n";    // Output is 35
-  std::cout << copyNode->get_data() << "\n";    // Output is 10
+  std::cout << my_node->get_data() << "\n";     // Output is 35
+  std::cout << copy_node.get_data() << "\n";    // Output is 10
   
   return 0;
 }
