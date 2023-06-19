@@ -20,17 +20,13 @@
  * @fn set_data(T dt)
  * @fn get_next()
  * @fn set_next(Node<T>* nd)
- * @fn get_prev()
- * @fn set_prev(Node<T>* nd)
  * @fn forward()
- * @fn backward()
  * @tparam T typename
  */
 template <typename T>
-class Node {
+class node {
 private:
-    Node<T>* next;  /**< Pointer to the next Node*/
-    //Node<T>* prev;  /**< Pointer to the previous Node*/
+    node<T>* next;  /**< Pointer to the next Node*/
     T data;         /**< Data which is stored in the Node*/
 
 public:
@@ -38,7 +34,7 @@ public:
      * Creates a new node that points to NULL both ways, but has NULL data.
      * @brief Default constructor.
      */
-    Node()
+    node()
         : next{nullptr}, data{} { }
 
     /**
@@ -46,7 +42,7 @@ public:
      * @brief Constructor.
      * @param dt node data.
      */
-    Node(const T dt)
+    node(const T dt)
         : next{nullptr}, data{dt} { }
 
     /**
@@ -55,7 +51,7 @@ public:
      * @param nd node to which it will point.
      * @param dt node data.
      */
-    Node(Node<T>* const nd, const T dt)
+    node(node<T>* const nd, const T dt)
         : next{nd}, data{dt} { }
 
     /**
@@ -65,7 +61,7 @@ public:
      * @param pnd node to which it points to behind.
      * @param dt node data.
      */
-    Node(Node<T>* const nnd, Node<T>* const pnd, const T dt)
+    node(node<T>* const nnd, node<T>* const pnd, const T dt)
         : next{nnd}, data{dt} { }
 
     /**
@@ -73,7 +69,7 @@ public:
      * @brief Copy constructor.
      * @param nd node to copy from.
      */
-    Node(const Node<T>& nd)
+    node(const node<T>& nd)
         : next{nd.next}, data{nd.data} { }
 
 
@@ -97,7 +93,7 @@ public:
      * @brief Get the pointer to the next node.
      * @return node object to which the current node object points to next.
      */
-    Node<T>* get_next() const {
+    node<T>* get_next() const {
         return this->next;
     }
 
@@ -105,7 +101,7 @@ public:
      * @brief Set the pointer to the next node.
      * @param nd new node object to which the current node object will point to next.
      */
-    void set_next(Node<T>* const nd) {
+    void set_next(node<T>* const nd) {
         this->next = nd;
     }
 
@@ -115,21 +111,9 @@ public:
     void forward() {
         if (this->next) {
             this->data = next->get_data();
-            //this->prev = next->get_prev();
             this->next = next->get_next();
         }
     }
-    
-    /**
-     * @brief Set current node to the previous node.
-     */
-    // void backward() {
-    //     if(this->prev) {
-    //         this->data = next->get_data();
-    //         this->next = next->get_next();
-    //         this->prev = next->get_prev();
-    //     }
-    // }
 };
 
 #endif // NODE_H
