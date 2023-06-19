@@ -1,0 +1,211 @@
+\doxysection{Node\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{struct_node}{}\label{struct_node}\index{Node$<$ T $>$@{Node$<$ T $>$}}
+
+
+\doxylink{struct_node}{Node} struct.  
+
+
+
+
+{\ttfamily \#include $<$node-\/doc.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_node_a0ac1d44cfe588be564acf25485029bd8}{Node}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new node that points to NULL and has NULL data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_a17b9ac68530d7c56ec7a1a8209bba224}{Node}} (const T dt)
+\begin{DoxyCompactList}\small\item\em Creates a new node that points to NULL and has data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_a7cb0f4a5088ae0d1fbbe6f60de71dc3f}{Node}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}const nd, const T dt)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_node}{Node} object that points to a node, and has data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_a7c8112081d2fa4fbdf2fe811965353f1}{Node}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \&const nd)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{struct_node}{Node} object from another \doxylink{struct_node}{Node} object. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{struct_node_a8094d013d4cefc80653853c4a5c45a7a}{get\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Get the \doxylink{struct_node}{Node} data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_node_a31d0ed9c2cc52d1bb57515c60382ffcd}{set\+Data}} (const T dt)
+\begin{DoxyCompactList}\small\item\em Set the current \doxylink{struct_node}{Node} object\textquotesingle{}s data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_node_a9c09d10b85ff8b1448448e96488b75fb}{get\+Next}} () const
+\begin{DoxyCompactList}\small\item\em Get the pointer to the next \doxylink{struct_node}{Node}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{struct_node_abdfdc20525606966c38190f74a31cf9f}{set\+Next}} (\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}nd)
+\begin{DoxyCompactList}\small\item\em Set the pointer to the next \doxylink{struct_node}{Node}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Node$<$ T $>$}
+\doxylink{struct_node}{Node} struct. 
+
+A standard \doxylink{struct_node}{Node} data structure that is used as a base unit in many other data structures. Supports insertion, removal, and dynamic types. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_node_a0ac1d44cfe588be564acf25485029bd8}\label{struct_node_a0ac1d44cfe588be564acf25485029bd8} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!Node@{Node}}
+\index{Node@{Node}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$\mbox{\hyperlink{struct_node}{\+::\+Node}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new node that points to NULL and has NULL data. 
+
+Default constructor. \begin{DoxySeeAlso}{See also}
+\doxylink{struct_node_a17b9ac68530d7c56ec7a1a8209bba224}{Node(const T dt)} ~\newline
+ 
+
+\doxylink{struct_node_a7cb0f4a5088ae0d1fbbe6f60de71dc3f}{Node(\+Node$<$\+T$>$\texorpdfstring{$\ast$}{*} const nd, const T dt)} 
+
+\doxylink{struct_node_a7c8112081d2fa4fbdf2fe811965353f1}{Node(\+Node$<$\+T$>$\& const nd)} 
+\end{DoxySeeAlso}
+\Hypertarget{struct_node_a17b9ac68530d7c56ec7a1a8209bba224}\label{struct_node_a17b9ac68530d7c56ec7a1a8209bba224} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!Node@{Node}}
+\index{Node@{Node}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$\mbox{\hyperlink{struct_node}{\+::\+Node}} (\begin{DoxyParamCaption}\item[{const T}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new node that points to NULL and has data. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em dt} & \doxylink{struct_node}{Node} data \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_node_a0ac1d44cfe588be564acf25485029bd8}{Node()} ~\newline
+ 
+
+\doxylink{struct_node_a7cb0f4a5088ae0d1fbbe6f60de71dc3f}{Node(\+Node$<$\+T$>$\texorpdfstring{$\ast$}{*} const nd, const T dt)} 
+
+\doxylink{struct_node_a7c8112081d2fa4fbdf2fe811965353f1}{Node(\+Node$<$\+T$>$\& const nd)} 
+\end{DoxySeeAlso}
+\Hypertarget{struct_node_a7cb0f4a5088ae0d1fbbe6f60de71dc3f}\label{struct_node_a7cb0f4a5088ae0d1fbbe6f60de71dc3f} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!Node@{Node}}
+\index{Node@{Node}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$\mbox{\hyperlink{struct_node}{\+::\+Node}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}const}]{nd,  }\item[{const T}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new \doxylink{struct_node}{Node} object that points to a node, and has data. 
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em nd} & \doxylink{struct_node}{Node} to which it will point \\
+\hline
+{\em dt} & \doxylink{struct_node}{Node} data \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_node_a17b9ac68530d7c56ec7a1a8209bba224}{Node(const T dt)} 
+
+\doxylink{struct_node_a0ac1d44cfe588be564acf25485029bd8}{Node()} 
+
+\doxylink{struct_node_a7c8112081d2fa4fbdf2fe811965353f1}{Node(\+Node$<$\+T$>$\& const nd)} 
+\end{DoxySeeAlso}
+\Hypertarget{struct_node_a7c8112081d2fa4fbdf2fe811965353f1}\label{struct_node_a7c8112081d2fa4fbdf2fe811965353f1} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!Node@{Node}}
+\index{Node@{Node}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$\mbox{\hyperlink{struct_node}{\+::\+Node}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \&const}]{nd }\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{struct_node}{Node} object from another \doxylink{struct_node}{Node} object. 
+
+Copy constructor. 
+\begin{DoxyParams}{Parameters}
+{\em nd} & \doxylink{struct_node}{Node} to which it will point \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_node_a17b9ac68530d7c56ec7a1a8209bba224}{Node(const T dt)} 
+
+\doxylink{struct_node_a0ac1d44cfe588be564acf25485029bd8}{Node()} 
+
+\doxylink{struct_node_a7cb0f4a5088ae0d1fbbe6f60de71dc3f}{Node(\+Node$<$\+T$>$\texorpdfstring{$\ast$}{*} const nd, const T dt)} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_node_a8094d013d4cefc80653853c4a5c45a7a}\label{struct_node_a8094d013d4cefc80653853c4a5c45a7a} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!getData@{getData}}
+\index{getData@{getData}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$\+::get\+Data}
+
+
+
+Get the \doxylink{struct_node}{Node} data. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_node}{Node} data 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_node_a31d0ed9c2cc52d1bb57515c60382ffcd}{set\+Data(const T dt)} 
+\end{DoxySeeAlso}
+\Hypertarget{struct_node_a9c09d10b85ff8b1448448e96488b75fb}\label{struct_node_a9c09d10b85ff8b1448448e96488b75fb} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!getNext@{getNext}}
+\index{getNext@{getNext}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getNext()}{getNext()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$\+::get\+Next}
+
+
+
+Get the pointer to the next \doxylink{struct_node}{Node}. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{struct_node}{Node} object to which the current \doxylink{struct_node}{Node} object points to 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_node_abdfdc20525606966c38190f74a31cf9f}{set\+Next(\+Node$<$\+T$>$\texorpdfstring{$\ast$}{*} const nd)} 
+\end{DoxySeeAlso}
+\Hypertarget{struct_node_a31d0ed9c2cc52d1bb57515c60382ffcd}\label{struct_node_a31d0ed9c2cc52d1bb57515c60382ffcd} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!setData@{setData}}
+\index{setData@{setData}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$\+::set\+Data (\begin{DoxyParamCaption}\item[{const T}]{dt }\end{DoxyParamCaption})}
+
+
+
+Set the current \doxylink{struct_node}{Node} object\textquotesingle{}s data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & new \doxylink{struct_node}{Node} data \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_node_a8094d013d4cefc80653853c4a5c45a7a}{get\+Data()} 
+\end{DoxySeeAlso}
+\Hypertarget{struct_node_abdfdc20525606966c38190f74a31cf9f}\label{struct_node_abdfdc20525606966c38190f74a31cf9f} 
+\index{Node$<$ T $>$@{Node$<$ T $>$}!setNext@{setNext}}
+\index{setNext@{setNext}!Node$<$ T $>$@{Node$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setNext()}{setNext()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{struct_node}{Node}}$<$ T $>$\+::set\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{nd }\end{DoxyParamCaption})}
+
+
+
+Set the pointer to the next \doxylink{struct_node}{Node}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}nd} & new \doxylink{struct_node}{Node} object to which the current \doxylink{struct_node}{Node} object will point to \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{struct_node_a9c09d10b85ff8b1448448e96488b75fb}{get\+Next()} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{node-doc_8h}{node-\/doc.\+h}}\end{DoxyCompactItemize}

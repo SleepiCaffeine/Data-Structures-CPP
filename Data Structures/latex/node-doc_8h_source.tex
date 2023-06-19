@@ -1,0 +1,64 @@
+\doxysection{node-\/doc.h}
+\hypertarget{node-doc_8h_source}{}\label{node-doc_8h_source}\mbox{\hyperlink{node-doc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ NODE\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ NODE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00027\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_node}{Node}}\ \{}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{struct_node}{Node<T>}}*\ next;\ \ }
+\DoxyCodeLine{00031\ \ \ \ \ T\ data;\ \ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{struct_node_a0ac1d44cfe588be564acf25485029bd8}{Node}}()\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_node}{Node}}\{nullptr,\ NULL\}\ \{\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{struct_node_a17b9ac68530d7c56ec7a1a8209bba224}{Node}}\ (\textcolor{keyword}{const}\ T\ dt)}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{struct_node}{Node}}\{nullptr,\ dt\}\ \{\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{struct_node_a7cb0f4a5088ae0d1fbbe6f60de71dc3f}{Node}}(\mbox{\hyperlink{struct_node}{Node<T>}}*\ \textcolor{keyword}{const}\ nd,\ \textcolor{keyword}{const}\ T\ dt)}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ :\ next\{nd\},\ data\{dt\}\ \{\ \};}
+\DoxyCodeLine{00066\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{struct_node_a0ac1d44cfe588be564acf25485029bd8}{Node}}(\mbox{\hyperlink{struct_node}{Node<T>}}\&\ \textcolor{keyword}{const}\ nd);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ T\ \mbox{\hyperlink{struct_node_a8094d013d4cefc80653853c4a5c45a7a}{getData}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_node_a31d0ed9c2cc52d1bb57515c60382ffcd}{setData}}(\textcolor{keyword}{const}\ T\ dt);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{struct_node}{Node<T>}}*\ \mbox{\hyperlink{struct_node_a9c09d10b85ff8b1448448e96488b75fb}{getNext}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_node_abdfdc20525606966c38190f74a31cf9f}{setNext}}(\mbox{\hyperlink{struct_node}{Node<T>}}*\ nd);}
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00107\ \mbox{\hyperlink{struct_node_a0ac1d44cfe588be564acf25485029bd8}{Node<T>::Node}}(\mbox{\hyperlink{struct_node}{Node<T>}}\&\ \textcolor{keyword}{const}\ \_n)\ \{}
+\DoxyCodeLine{00108\ \ \ \ \ next\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_node}{Node<T>}}();}
+\DoxyCodeLine{00109\ \ \ \ \ next-\/>setNext(\_n-\/>\mbox{\hyperlink{struct_node_a9c09d10b85ff8b1448448e96488b75fb}{getNext}}());}
+\DoxyCodeLine{00110\ \ \ \ \ data\ =\ \_n.data;\ }
+\DoxyCodeLine{00111\ \}}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00114\ T\ \mbox{\hyperlink{struct_node_a8094d013d4cefc80653853c4a5c45a7a}{Node<T>::getData}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordflow}{return}\ data;}
+\DoxyCodeLine{00116\ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_node_a31d0ed9c2cc52d1bb57515c60382ffcd}{Node<T>::setData}}(\textcolor{keyword}{const}\ T\ dt)\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ this-\/>data\ =\ dt;}
+\DoxyCodeLine{00121\ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00124\ \mbox{\hyperlink{struct_node}{Node<T>}}*\ \mbox{\hyperlink{struct_node_a9c09d10b85ff8b1448448e96488b75fb}{Node<T>::getNext}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{return}\ next;}
+\DoxyCodeLine{00126\ \}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_node_abdfdc20525606966c38190f74a31cf9f}{Node<T>::setNext}}(\mbox{\hyperlink{struct_node}{Node<T>}}*\ nd)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ this-\/>next\ =\ nd;}
+\DoxyCodeLine{00131\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NODE\_H}}
+
+\end{DoxyCode}
