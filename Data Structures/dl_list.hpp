@@ -13,6 +13,7 @@
 #include "double_node.hpp"
 #include <cstddef>
 #include <stdexcept>
+#include <iostream>
 
 /*!
  * @class dl_list
@@ -260,14 +261,18 @@ public:
      * @return Length of LL
      * @see size()
      */
-    unsigned int length() const {return len;}
+    unsigned int length() {
+        update_len();
+        return len;}
 
     /**
      * Returns the length of the sl list
      * @return Length of LL
      * @see length()
      */
-    unsigned int size() const {return len;}
+    unsigned int size() {
+        update_len();
+        return len;}
 
     /**
      * Updates the length of the sl_list (Mainly kept to avoid bugs, will later implement other features to avoid using this)
@@ -332,6 +337,15 @@ double_node<T>* dl_list<T>::push_front(T dt) {
         ++len;
         return head;
     }
+
+    if (len == 1) {
+        tail = head;
+        head = new double_node<T>(dt);
+        head->set_next(tail);
+        tail->set_prev(head);
+        ++len;
+        return head;
+    }
     // Create a new head object with the provided data and pointing to the head itself
     head = new double_node<T>(head, dt);
     ++len;
@@ -342,16 +356,26 @@ template <typename T>
 double_node<T>* dl_list<T>::push_front(double_node<T>* const nd) {
     // If the list has a length of 0, create a node for the head, and set the tail to nullptr
     if (!len) {
-        head = new double_node<int>(*nd);
+        head = new double_node<T>(*nd);
         tail = nullptr;
         ++len;
         return head;
     }
 
+    if (len == 1) {
+        tail = head;
+        head = new double_node<T>(*nd);
+        head->set_next(tail);
+        tail->set_prev(head);
+        ++len;
+        return head;
+    }
+
     // Swap head and provided node
-    auto oldHead = new double_node<T>(head->get_next(), nd, head->get_data());
+    auto oldHead = new double_node<T>(*head);
+    oldHead->set_prev(nd);
     nd->set_next(oldHead);
-    head = nd;
+    head = new double_node<T>(*nd);
 
     ++len;
     return head;
@@ -411,7 +435,9 @@ double_node<T>* dl_list<T>::push_back(double_node<T>* const nd) {
     }
 
     double_node<T>* currNode = head;
-    double_node<T>* oldTail = new double_node<T>(nd, tail->get_prev(), tail->get_data());
+    double_node<T>* oldTail = new double_node<T>(*tail);
+    oldTail->set_next(nd);
+
     nd->set_prev(oldTail);
     tail = nd;
 

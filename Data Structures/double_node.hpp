@@ -192,14 +192,8 @@ public:
 };
 
 template <typename T>
-double_node<T>::double_node(const double_node<T>& nd) {
-    next = new double_node<T>();
-    prev = new double_node<T>();
-
-    next = nd.get_next();
-    prev = nd.get_prev();
-    data = nd.get_data();
-}
+double_node<T>::double_node(const double_node<T>& nd)
+    : next{nd.get_next()}, prev{nd.get_prev()}, data{nd.get_data()} { }
 
 template <typename T>
 void double_node<T>::set_prev(double_node<T>* const nd) {
