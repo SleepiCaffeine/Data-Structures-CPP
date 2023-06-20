@@ -28,10 +28,10 @@
 template <typename T>
 class double_node {
 
-protected:
-    double_node<T>* next;
-    double_node<T>* prev;
-    T data;
+protected:  
+    double_node<T>* next;   /**< Pointer to the next node [double_node<T>]*/
+    double_node<T>* prev;   /**< Pointer to the previous node [double_node<T>*]*/
+    T data;                 /**< Data which is stored in the Node [T]*/
 
 public:
     /**
@@ -73,7 +73,9 @@ public:
      * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
      */
     double_node(double_node<T>* const nd)
-        : next{nd}, prev{nullptr} { }
+        : next{nd}, prev{nullptr} {
+            nd->set_prev(this);
+         }
 
    /**
     * Creates a new double_node object that points to a double_node, and has data.
@@ -89,7 +91,9 @@ public:
     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
     */
     double_node(double_node<T>* const nd, const T dt)
-        : next{nd}, data{dt} { };
+        : next{nd}, data{dt} {
+            nd->set_prev(this);
+         };
 
     /**
      * Creates a new double_node object that points to 2 double_nodes, but has no data.
@@ -105,7 +109,10 @@ public:
      * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
      */
     double_node(double_node<T>* const nnd, double_node<T>* const bnd)
-        : next{nnd}, prev{bnd} {}
+        : next{nnd}, prev{bnd} {
+            //nnd->set_prev(this);
+            //bnd->set_next(this);
+        }
 
     
     /**
@@ -123,7 +130,10 @@ public:
      * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd)
      */
     double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
-        : next{nnd}, prev{bnd}, data{dt}  {}
+        : next{nnd}, prev{bnd}, data{dt}  {
+            //nnd->set_prev(this);
+            //bnd->set_next(this);
+        }
     
 /** 
     * Construct a new double_node object from another double_node object.
@@ -193,32 +203,32 @@ double_node<T>::double_node(const double_node<T>& nd) {
 
 template <typename T>
 void double_node<T>::set_prev(double_node<T>* const nd) {
-    this->prev = nd;
+    prev = nd;
 }
 
 template <typename T>
 double_node<T>* double_node<T>::get_prev() const {
-    return this->prev;
+    return prev;
 }
 
 template <typename T>
 void double_node<T>::set_next(double_node<T>* const nd) {
-    this->next = nd;
+    next = nd;
 }
 
 template <typename T>
 double_node<T>* double_node<T>::get_next() const {
-    return this->next;
+    return next;
 }
 
 template <typename T>
 T double_node<T>::get_data() const {
-    return this->data;
+    return data;
 }
 
 template <typename T>
 void double_node<T>::set_data(const T dt) {
-    this->data = dt;
+    data = dt;
 }
 
 #endif // DOUBLE_NODE_H
