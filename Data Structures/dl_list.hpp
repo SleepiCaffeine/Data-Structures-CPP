@@ -13,7 +13,6 @@
 #include "double_node.hpp"
 #include <cstddef>
 #include <stdexcept>
-#include <iostream>
 
 /*!
  * @class dl_list
