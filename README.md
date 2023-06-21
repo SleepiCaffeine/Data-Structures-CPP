@@ -15,33 +15,10 @@
 
 
 A header-only, STL-like library for node-type data structures that are not natively supported by **STL**. All headers are documented using Doxygen comments. <br>
-Currently - all supported data structures and class are [here](https://github.com/SleepiCaffeine/Data-Structures-CPP/blob/main/Data%20Structures/currentVersion.md).
+Currently - all supported data structures and class are [here](https://github.com/SleepiCaffeine/Data-Structures-CPP/blob/main/status.md).
 
 ## How to use
-Simply include `data_structues.hpp` or any individual header, and start using it. If you are unsure how to clone a repository - [read here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
-
-## Example of use
-All classes and types will have their own users-guide, and hopefully a Doxygen generated documentation PDF.
-```
-#include "Data Structures\node.h"
-#include <iostream>
-
-int main() {
-  node<int>* my_node = new node<int>(10);   // Creates a node with value 10, and points to nothing
-  auto my_other_node  = new node<int>(20);  // Creates a node with value 20, and points to nothing
-  
-  my_node->set_next(my_other_node);                         // Now `my_node` points to `my_other_node`
-  std::cout << my_node->get_next()->get_data() << "\n";     // Output is 20
-
-  auto copy_node = node<int>(*my_node);
-  my_node->set_data(35);
-  
-  std::cout << my_node->get_data() << "\n";     // Output is 35
-  std::cout << copy_node.get_data() << "\n";    // Output is 10
-  
-  return 0;
-}
-```
+Simply include `data_structues.hpp` or any individual header, and start using it. If you are unsure how to clone a repository - [read here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository). At the end, I hope to add a doxygen generated PDF to show the full documentation.
 
 ## Issues and Pull Requests
 Currently there is no template for providing issues, so anything is appreciated! 
