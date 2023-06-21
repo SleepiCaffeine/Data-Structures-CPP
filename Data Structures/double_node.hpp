@@ -2,8 +2,8 @@
  * @file double_node.h
  * @author Vakaris Michejenko (sleepicaffeine@gmail.com)
  * @brief  A header that defines a dynamic double_node class
- * @version 0.2
- * @date 2023-06-19
+ * @version 0.21
+ * @date 2023-06-21
  * @copyright Copyright (c) 2023
  * @link https://github.com/SleepiCaffeine
  */
@@ -73,9 +73,7 @@ public:
      * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
      */
     double_node(double_node<T>* const nd)
-        : next{nd}, prev{nullptr} {
-            nd->set_prev(this);
-         }
+        : next{nd}, prev{nullptr} { }
 
    /**
     * Creates a new double_node object that points to a double_node, and has data.
@@ -91,9 +89,7 @@ public:
     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
     */
     double_node(double_node<T>* const nd, const T dt)
-        : next{nd}, data{dt} {
-            nd->set_prev(this);
-         };
+        : next{nd}, data{dt} { }
 
     /**
      * Creates a new double_node object that points to 2 double_nodes, but has no data.
@@ -109,10 +105,7 @@ public:
      * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
      */
     double_node(double_node<T>* const nnd, double_node<T>* const bnd)
-        : next{nnd}, prev{bnd} {
-            //nnd->set_prev(this);
-            //bnd->set_next(this);
-        }
+        : next{nnd}, prev{bnd} { }
 
     
     /**
@@ -130,10 +123,7 @@ public:
      * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd)
      */
     double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
-        : next{nnd}, prev{bnd}, data{dt}  {
-            //nnd->set_prev(this);
-            //bnd->set_next(this);
-        }
+        : next{nnd}, prev{bnd}, data{dt}  { }
     
 /** 
     * Construct a new double_node object from another double_node object.

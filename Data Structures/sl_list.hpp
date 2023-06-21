@@ -204,7 +204,7 @@ public:
     void set_head(node<T>* const nd);
 
     /**
-     * Changes the head's data to the provided node
+     * Changes the head's data to the provided data value
      * @param dt The head's new data
      * @see set_head(node<T>* const nd)
      * @see get_head()

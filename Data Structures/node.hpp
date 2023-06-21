@@ -2,8 +2,8 @@
  * @file node.h
  * @author Vakaris Michejenko (sleepicaffeine@gmail.com)
  * @brief  A header that defines a dynamic node class
- * @version 0.2
- * @date 2023-06-19
+ * @version 0.21
+ * @date 2023-06-21
  * @copyright Copyright (c) 2023
  * @link https://github.com/SleepiCaffeine
  */
@@ -11,8 +11,8 @@
 #ifndef NODE_H
 #define NODE_H
 /*!
- * @class Node  
- * @brief Node class.
+ * @class node  
+ * @brief node class.
  * 
  * @details A standard Node data structure that is used as a base unit in many other data structures. Supports insertion, removal, and dynamic types.
  * 
