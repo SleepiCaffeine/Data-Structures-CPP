@@ -6,13 +6,13 @@
 - [x] Singly-Linked list
 - [x] Double-Linked list
 - [x] Binary-Search Tree
+- [x] Stack
 
 ## TODO:
 
 - [ ] Binary Tree
 - [ ] Generic Tree
 - [ ] Queue
-- [ ] Stack
 - [ ] Heap
 - [ ] Matrix (I kinda did in in C, so it'll be quick)
 
