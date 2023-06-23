@@ -1,9 +1,9 @@
 /**
- * @file node.h
+ * @file node.hpp
  * @author Vakaris Michejenko (sleepicaffeine@gmail.com)
  * @brief  A header that defines a dynamic node class
- * @version 0.21
- * @date 2023-06-21
+ * @version 0.3
+ * @date 2023-06-24
  * @copyright Copyright (c) 2023
  * @link https://github.com/SleepiCaffeine
  */
@@ -20,7 +20,6 @@
  * @fn set_data(T dt)
  * @fn get_next()
  * @fn set_next(Node<T>* nd)
- * @fn forward()
  * @tparam T typename
  */
 template <typename T>
@@ -55,15 +54,6 @@ public:
         : next{nd}, data{dt} { }
 
     /**
-     * Creates a new node that points to a node in both ways, and has data.
-     * @brief Constructor.
-     * @param nnd node to which it points to next.
-     * @param dt node data.
-     */
-    node(node<T>* const nnd, node<T>*, const T dt)
-        : next{nnd}, data{dt} { }
-
-    /**
      * Construct a new node from another node object.
      * @brief Copy constructor.
      * @param nd node to copy from.
@@ -77,7 +67,7 @@ public:
      * @return node data.
      */
     T get_data() const {
-        return this->data;
+        return data;
     }
 
     /**
@@ -85,7 +75,7 @@ public:
      * @param dt new node data.
      */
     void set_data(const T dt) {
-        this->data = dt;
+        data = dt;
     }
 
     /**
@@ -93,7 +83,7 @@ public:
      * @return node object to which the current node object points to next.
      */
     node<T>* get_next() const {
-        return this->next;
+        return next;
     }
 
     /**
@@ -101,17 +91,7 @@ public:
      * @param nd new node object to which the current node object will point to next.
      */
     void set_next(node<T>* const nd) {
-        this->next = nd;
-    }
-
-    /**
-     * @brief Set current node to the next node.
-     */
-    void forward() {
-        if (this->next) {
-            this->data = next->get_data();
-            this->next = next->get_next();
-        }
+        next = nd;
     }
 };
 

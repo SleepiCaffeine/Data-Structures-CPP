@@ -1,9 +1,9 @@
 /**
- * @file double_node.h
+ * @file double_node.hpp
  * @author Vakaris Michejenko (sleepicaffeine@gmail.com)
  * @brief  A header that defines a dynamic double_node class
- * @version 0.21
- * @date 2023-06-21
+ * @version 0.3
+ * @date 2023-06-24
  * @copyright Copyright (c) 2023
  * @link https://github.com/SleepiCaffeine
  */
