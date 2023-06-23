@@ -41,8 +41,6 @@ public:
      * @see double_node(double_node<T>* const nd)
      * @see double_node(double_node<T>& const nd)
      * @see double_node(double_node<T>* const nd, const T dt)
-     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd)
-     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
      */
     double_node() 
         : next{nullptr}, prev{nullptr} { };
@@ -55,8 +53,6 @@ public:
      * @see double_node(double_node<T>* const nd)
      * @see double_node(double_node<T>& const nd) 
      * @see double_node(double_node<T>* const nd, const T dt)
-     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd)
-     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
      */
     double_node(const T dt)
         : double_node{nullptr, nullptr, dt} { };
@@ -69,8 +65,6 @@ public:
      * @see double_node(const T dt)
      * @see double_node(double_node<T>& const nd)  
      * @see double_node(double_node<T>* const nd, const T dt)
-     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd)
-     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
      */
     double_node(double_node<T>* const nd)
         : next{nd}, prev{nullptr} { }
@@ -84,46 +78,10 @@ public:
     * @see double_node()
     * @see double_node(const T dt)
     * @see double_node(double_node<T>* const nd)
-    * @see double_node(double_node<T>& const nd)
-    * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd)
-    * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
+    * @see double_node(double_node<T>& const nd
     */
     double_node(double_node<T>* const nd, const T dt)
         : next{nd}, data{dt} { }
-
-    /**
-     * Creates a new double_node object that points to 2 double_nodes, but has no data.
-     * @note The 2 nodes provided as parameters will NOT point to this new node. You will have to either do this manually or use a DLL 
-     * 
-     * @param nnd double_node to which it will point
-     * @param bnd double_node which will point to it
-     * @see double_node()
-     * @see double_node(const T dt)
-     * @see double_node(double_node<T>* nd)
-     * @see double_node(double_node<T>& nd)
-     * @see double_node(double_node<T>* const nd, const T dt)
-     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
-     */
-    double_node(double_node<T>* const nnd, double_node<T>* const bnd)
-        : next{nnd}, prev{bnd} { }
-
-    
-    /**
-     * Creates a new double_node object that points to 2 double_nodes, and has data
-     * @note The 2 nodes provided as parameters will NOT point to this new node. You will have to either do this manually or use a DLL 
-     * 
-     * @param nnd double_node to which it will point
-     * @param bnd double_node which will point to it
-     * @param dt double_node data 
-     * @see double_node()
-     * @see double_node(const T dt)
-     * @see double_node(double_node<T>*const nd)
-     * @see double_node(double_node<T>& const nd)
-     * @see double_node(double_node<T>* const nd, const T dt)
-     * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd)
-     */
-    double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
-        : next{nnd}, prev{bnd}, data{dt}  { }
     
 /** 
     * Construct a new double_node object from another double_node object.
@@ -132,9 +90,7 @@ public:
     * @see double_node()
     * @see double_node(const T dt)
     * @see double_node(double_node<T>* nd)
-    * @see double_node(double_node<T>* const nd, const T dt)
-    * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd)
-    * @see double_node(double_node<T>* const nnd, double_node<T>* const bnd, const T dt)
+    * @see double_node(double_node<T>* const nd, const T dt
     */
     double_node(const double_node<T>& nd);
 
