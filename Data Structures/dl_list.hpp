@@ -2,8 +2,6 @@
  * @file dl_list.hpp
  * @author Vakaris Michejenko (sleepicaffeine@gmail.com)
  * @brief  A header that defines a dynamic Doubly-linked list class
- * @version 0.3
- * @date 2023-06-24
  * @copyright Copyright (c) 2023
  * @link https://github.com/SleepiCaffeine
  */
@@ -50,7 +48,7 @@ public:
      * @see dl_list(const double_node<T>& nd)
      */
     dl_list() 
-        : head{nullptr}, tail{nullptr}, len{0} {}
+        : head{nullptr}, len{0} {}
 
     /**
      * Constructs a new sl-list from another dl_list object
